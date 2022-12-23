@@ -77,5 +77,6 @@ m = folium.Map(
     zoom_start=15,
 )
 min_df = df.resample('min').mean()
+# resample only used on datetime indexes and basically resamples the df along the mean minutes
 min_df.apply(add_marker, axis=1)
 m
